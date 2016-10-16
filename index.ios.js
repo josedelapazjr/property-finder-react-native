@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -12,15 +6,7 @@ import {
   NavigatorIOS
 } from 'react-native';
 
-class HelloWorld extends Component {
-  render() {
-    return(
-        <Text style={styles.text}>
-          Hello world!
-        </Text>
-    );
-  }
-}
+import SearchPage from './SearchPage';
 
 class PropertyFinderApp extends React.Component {
   render() {
@@ -29,19 +15,13 @@ class PropertyFinderApp extends React.Component {
         style={styles.container}
         initialRoute={{
           title: 'Property Finder',
-          component: HelloWorld,
+          component: SearchPage,
         }}/>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  text: {
-    color: 'black',
-    backgroundColor: 'white',
-    fontSize: 30,
-    margin: 80
-  },
   container: {
     flex: 1
   }
